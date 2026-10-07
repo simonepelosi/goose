@@ -23,9 +23,10 @@ type v3AuthRequest struct {
 // v3AuthIdentity contains the identity portion of an authentication
 // request.
 type v3AuthIdentity struct {
-	Methods  []string        `json:"methods"`
-	Password *v3AuthPassword `json:"password,omitempty"`
-	Token    *v3AuthToken    `json:"token,omitempty"`
+	Methods               []string                     `json:"methods"`
+	Password              *v3AuthPassword              `json:"password,omitempty"`
+	Token                 *v3AuthToken                 `json:"token,omitempty"`
+	ApplicationCredential *v3AuthApplicationCredential `json:"application_credential,omitempty"`
 }
 
 // v3AuthPassword contains a password authentication request.
